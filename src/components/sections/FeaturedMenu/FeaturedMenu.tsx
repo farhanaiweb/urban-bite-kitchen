@@ -1,0 +1,73 @@
+import { Section, Container } from "@/components/ui";
+import { DemoImage } from "@/components/ui/DemoImage";
+
+type FeaturedCategory = {
+  id: string;
+  name: string;
+  blurb: string;
+};
+
+export function FeaturedMenu() {
+  const categories: FeaturedCategory[] = [
+    { id: "burgers", name: "Burgers", blurb: "Smash burgers and house favourites" },
+    { id: "chicken", name: "Crispy Chicken", blurb: "Crispy chicken, wings and tenders" },
+    { id: "wraps", name: "Wraps & Loaded Fries", blurb: "Wraps and loaded fries" },
+  ];
+
+  return (
+    <Section id="featured-menu">
+      <Container>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {categories.map((category) => (
+            <div
+              key={category.id}
+              className="group relative rounded-2xl overflow-hidden"
+              style={{ minHeight: "320px" }}
+            >
+              <a
+                href={`/menu?category=${category.id}`}
+                className="absolute inset-0 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-surface focus-visible:ring-offset-2 focus-visible:ring-offset-deep-red"
+              >
+                <div className="absolute inset-0">
+                  <DemoImage
+                    filename={`category-${category.id}.jpg`}
+                    alt={category.name}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    variant="dark"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+                </div>
+
+                <div className="relative z-10 absolute bottom-0 left-0 right-0 p-6">
+                  <p
+                    className="text-cream text-sm font-medium uppercase tracking-widest mb-2"
+                  >
+                    {category.name}
+                  </p>
+                  <h3
+                    className="font-archivo font-extrabold text-cream uppercase leading-tight mb-2"
+                    style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
+                  >
+                    {category.name}
+                  </h3>
+                  <p
+                    className="text-cream/90 text-sm leading-relaxed mb-4"
+                  >
+                    {category.blurb}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-cream hover:underline transition-colors">
+                    View menu
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
