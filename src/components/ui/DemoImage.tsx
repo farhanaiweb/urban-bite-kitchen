@@ -43,7 +43,7 @@ export function DemoImage({
   }
 
   const lightPlaceholderClass = `relative overflow-hidden bg-cream-surface border border-border ${className}`;
-  const darkPlaceholderClass = `relative overflow-hidden bg-black ${className}`;
+  const darkPlaceholderClass = `relative overflow-hidden bg-[#1A1A1A] ${className}`;
 
   const lightIconColor = "text-text-muted";
   const darkIconColor = "text-cream/70";
@@ -62,7 +62,7 @@ export function DemoImage({
     >
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4">
         <svg
-          className={`h-8 w-8 ${iconColor}`}
+          className={`h-10 w-10 ${iconColor}`}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -73,7 +73,7 @@ export function DemoImage({
           <circle cx="8.5" cy="8.5" r="1.5" />
           <path d="M21 15l-5-5L5 17" />
         </svg>
-        <span className={`text-xs ${labelColor}`}>Demo image placeholder</span>
+        <span className={`text-sm ${labelColor}`}>Demo image placeholder</span>
       </div>
     </div>
   );

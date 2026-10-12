@@ -65,11 +65,11 @@ export function Offers() {
                   </p>
                   <div className="mt-4">
                     <Button
-                      variant={offer.ctaLink === "/reservations" ? "on-dark" : "secondary"}
-                      size="sm"
+                      variant={offer.ctaLink === "/reservations" ? "primary" : "secondary"}
+                      size="md"
+                      fullWidth
                       as="a"
                       href={offer.ctaLink as string}
-                      className="w-auto px-4"
                     >
                       {offer.ctaText}
                     </Button>

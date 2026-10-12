@@ -63,9 +63,6 @@ export function About() {
             </Button>
           </div>
         </div>
-
-        {/* Decorative watermark */}
-        <p className="mt-12 text-text-muted text-xs font-medium text-center opacity-20" aria-hidden="true">ABOUT</p>
       </Container>
     </Section>
   );

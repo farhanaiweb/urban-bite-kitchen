@@ -27,7 +27,7 @@ export function PopularDishes() {
               </div>
               <div className="p-5">
                 <h3
-                  className="font-archivo font-medium text-black text-xl uppercase tracking-wider mb-3"
+                  className="font-archivo font-bold text-black text-lg uppercase leading-tight mb-3"
                 >
                   {dish.name}
                 </h3>

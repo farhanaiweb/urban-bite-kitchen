@@ -22,8 +22,7 @@ export function FeaturedMenu() {
           {categories.map((category) => (
             <div
               key={category.id}
-              className="group relative rounded-2xl overflow-hidden"
-              style={{ minHeight: "320px" }}
+              className="group relative overflow-hidden rounded-2xl bg-black dark-surface min-h-[320px] md:min-h-[400px]"
             >
               <a
                 href={`/menu?category=${category.id}`}
@@ -40,11 +39,6 @@ export function FeaturedMenu() {
                 </div>
 
                 <div className="relative z-10 absolute bottom-0 left-0 right-0 p-6">
-                  <p
-                    className="text-cream text-sm font-medium uppercase tracking-widest mb-2"
-                  >
-                    {category.name}
-                  </p>
                   <h3
                     className="font-archivo font-extrabold text-cream uppercase leading-tight mb-2"
                     style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
