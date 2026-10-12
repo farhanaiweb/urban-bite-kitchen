@@ -7,7 +7,7 @@ export function About() {
       <Container>
         <div className="flex flex-col lg:flex-row gap-12 items-center">
 
-          <div className="lg:order-2 lg:w-1/2 flex-shrink-0 aspect-[4/5] rounded-xl overflow-hidden shadow-lg">
+          <div className="lg:order-2 lg:w-1/2 flex-shrink-0 aspect-[4/5] rounded-xl overflow-hidden shadow-lg relative">
             <DemoImage
               filename="about.webp"
               alt="A burger and fries"

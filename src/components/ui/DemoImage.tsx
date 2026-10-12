@@ -57,8 +57,7 @@ export function DemoImage({
 
   return (
     <div
-      className={placeholderClass}
-      style={{ inset: 0, position: "absolute" }}
+      className={`${placeholderClass} absolute inset-0`}
       aria-hidden="true"
     >
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4">
