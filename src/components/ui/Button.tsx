@@ -159,15 +159,19 @@ const ButtonButton = forwardRef<HTMLButtonElement, ButtonButtonProps>(
 
 ButtonButton.displayName = "ButtonButton";
 
-function Button(props: ButtonProps) {
-  const { as, href, ...rest } = props;
-  const isLink = as === "a" || href !== undefined;
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    { as, href, ...rest },
+    ref
+  ) => {
+    const isLink = as === "a" || href !== undefined;
 
-  if (isLink) {
-    return <ButtonAnchor {...(rest as ButtonAnchorProps)} href={href!} />;
+    if (isLink) {
+      return <ButtonAnchor {...(rest as ButtonAnchorProps)} href={href!} />;
+    }
+    return <ButtonButton {...(rest as ButtonButtonProps)} ref={ref} />;
   }
-  return <ButtonButton {...(rest as ButtonButtonProps)} />;
-}
+);
 
 Button.displayName = "Button";
 

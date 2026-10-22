@@ -15,14 +15,22 @@ export function FeaturedMenu() {
   ];
 
   return (
-    <Section id="featured-menu">
+    <Section id="featured-menu" className="bg-cream-surface">
       <Container>
+        <div className="mb-10 md:mb-12">
+          <p className="text-deep-red text-sm font-medium tracking-widest uppercase mb-2">Featured menu</p>
+          <h2 className="font-archivo font-extrabold text-3xl md:text-4xl lg:text-5xl text-black uppercase tracking-wider mb-4">
+            Explore our categories
+          </h2>
+          <p className="text-text-muted text-base md:text-lg leading-relaxed max-w-2xl">
+            From smash burgers to loaded fries — pick your favourite and dive in.
+          </p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
           {categories.map((category) => (
             <div
               key={category.id}
-              className="group relative overflow-hidden rounded-2xl bg-black dark-surface min-h-[320px] md:min-h-[400px]"
+              className="group relative overflow-hidden rounded-2xl bg-black dark-surface min-h-[320px] md:min-h-[380px]"
             >
               <a
                 href={`/menu?category=${category.id}`}
@@ -35,19 +43,14 @@ export function FeaturedMenu() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     variant="dark"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10" />
                 </div>
 
                 <div className="relative z-10 absolute bottom-0 left-0 right-0 p-6">
-                  <h3
-                    className="font-archivo font-extrabold text-cream uppercase leading-tight mb-2"
-                    style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
-                  >
+                  <h3 className="font-archivo font-extrabold text-2xl md:text-3xl text-cream uppercase leading-tight mb-2">
                     {category.name}
                   </h3>
-                  <p
-                    className="text-cream/90 text-sm leading-relaxed mb-4"
-                  >
+                  <p className="text-cream/90 text-sm leading-relaxed mb-4">
                     {category.blurb}
                   </p>
                   <span className="inline-flex items-center gap-1 text-cream hover:underline transition-colors">

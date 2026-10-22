@@ -3,11 +3,12 @@ import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui";
 import { MobileMenu } from "./MobileMenu";
 import { NavLinks } from "./NavLinks";
+import { Container } from "@/components/ui";
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-cream border-b border-border">
-      <div className="mx-auto max-w-[80rem] px-6">
+      <Container maxWidth="xl">
         <div className="flex items-center justify-between h-16 gap-4">
           <Link
             href="/"
@@ -32,7 +33,7 @@ export function Navbar() {
 
           <MobileMenu />
         </div>
-      </div>
+      </Container>
     </header>
   );
 }

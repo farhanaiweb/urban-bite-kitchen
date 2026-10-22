@@ -332,7 +332,7 @@ export const popularDishes: MenuItem[] = [
     price: 8.49,
     currency: "GBP",
     categoryId: "burgers",
-    image: "/images/demo/classic-smash-burger.webp",
+    image: "/images/demo/dish-smash-burger.webp",
     isDemo: true,
   },
   {
@@ -342,7 +342,7 @@ export const popularDishes: MenuItem[] = [
     price: 8.99,
     currency: "GBP",
     categoryId: "chicken",
-    image: "/images/demo/crispy-chicken-burger.webp",
+    image: "/images/demo/dish-chicken-burger.webp",
     isDemo: true,
   },
   {
@@ -352,7 +352,7 @@ export const popularDishes: MenuItem[] = [
     price: 6.49,
     currency: "GBP",
     categoryId: "wraps",
-    image: "/images/demo/loaded-fries.webp",
+    image: "/images/demo/dish-loaded-fries.webp",
     isDemo: true,
   },
   {
@@ -362,7 +362,7 @@ export const popularDishes: MenuItem[] = [
     price: 7.49,
     currency: "GBP",
     categoryId: "wraps",
-    image: "/images/demo/spicy-chicken-wrap.webp",
+    image: "/images/demo/dish-chicken-wrap.webp",
     isDemo: true,
   },
 ];

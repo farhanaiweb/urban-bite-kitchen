@@ -7,9 +7,9 @@ interface SectionProps extends HTMLAttributes<HTMLElement> {
 }
 
 const paddingClasses = {
-  sm: "py-12 md:py-16",
-  md: "py-20 md:py-28",
-  lg: "py-28 md:py-36",
+  sm: "py-12 md:py-16 lg:py-20",
+  md: "py-16 md:py-20 lg:py-24",
+  lg: "py-20 md:py-24 lg:py-28",
 };
 
 export function Section({

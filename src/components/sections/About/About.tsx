@@ -5,18 +5,20 @@ export function About() {
   return (
     <Section id="about">
       <Container>
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-          <div className="lg:order-2 lg:w-1/2 flex-shrink-0 aspect-[4/5] rounded-xl overflow-hidden shadow-lg relative">
-            <DemoImage
-              filename="about.webp"
-              alt="A burger and fries"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              variant="light"
-            />
+          <div className="lg:order-2 w-full min-w-0">
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-[4/5] lg:max-h-[560px] shadow-lg">
+              <DemoImage
+                filename="about.webp"
+                alt="A burger and fries"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                variant="light"
+              />
+            </div>
           </div>
 
-          <div className="lg:order-1 lg:w-1/2">
+          <div className="lg:order-1 w-full min-w-0">
             <p className="text-deep-red text-sm font-medium tracking-widest uppercase mb-2">About us</p>
             <h2 className="font-archivo font-extrabold uppercase leading-[1.05] text-3xl md:text-4xl lg:text-5xl text-black mb-6">
               Burgers, chicken and bold flavour in Manchester
@@ -58,7 +60,7 @@ export function About() {
               </div>
             </div>
 
-            <Button variant="primary" size="lg" as="a" href="/reservations">
+            <Button variant="primary" size="lg" as="a" href="/reservations" className="w-full sm:w-auto">
               Book a Table
             </Button>
           </div>

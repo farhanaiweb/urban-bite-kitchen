@@ -17,7 +17,7 @@ export function HeroImage() {
   const hasImage = imageExists();
 
   return (
-    <div className="relative w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-[1/1]">
+    <div className="relative w-full aspect-square max-h-[420px] mx-auto md:aspect-[4/5] lg:aspect-[1/1] max-h-none">
       <div className="absolute inset-0 bg-gradient-radial from-deep-red/10 via-black to-black rounded-2xl" aria-hidden="true" />
       <div className="relative z-10 w-full h-full overflow-hidden rounded-2xl">
         {hasImage ? (

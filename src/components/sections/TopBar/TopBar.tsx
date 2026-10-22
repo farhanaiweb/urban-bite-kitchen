@@ -1,9 +1,10 @@
 import { siteConfig } from "@/config/site";
+import { Container } from "@/components/ui";
 
 export function TopBar() {
   return (
     <div className="bg-black text-cream-surface dark-surface">
-      <div className="mx-auto max-w-[80rem] px-6">
+      <Container maxWidth="xl">
         <div className="flex flex-wrap items-center justify-between gap-2 py-2 text-xs md:py-1.5">
           <div className="flex items-center gap-4">
             <a
@@ -56,7 +57,7 @@ export function TopBar() {
             </a>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

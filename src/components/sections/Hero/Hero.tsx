@@ -1,19 +1,17 @@
 import { HeroImage } from "./HeroImage";
 import { Button } from "@/components/ui";
+import { Section, Container } from "@/components/ui";
 
 // Noise texture as inline SVG
 const noiseTexture = "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjU2IDI1NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOSIgbnVtT2N0YXZlcz0iNCIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDMiLz48L3N2Zz4=";
 
 export function Hero() {
   return (
-    <section
-      className="relative w-full bg-black overflow-hidden dark-surface"
-      aria-labelledby="hero-heading"
-    >
+    <Section id="hero" className="relative bg-black overflow-hidden dark-surface" aria-labelledby="hero-heading">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] from-deep-red/10 to-transparent" aria-hidden="true" />
       <div className={`absolute inset-0 bg-[url(${noiseTexture})] opacity-30`} aria-hidden="true" />
 
-       <div className="relative mx-auto max-w-[80rem] px-6 py-10 md:py-12 lg:py-14">
+      <Container maxWidth="xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="relative z-10 max-w-xl animate-fade-in-up">
              <p className="text-cream-surface/70 text-sm font-medium tracking-widest uppercase mb-4 animate-fade-in-up delay-100">
@@ -45,7 +43,7 @@ export function Hero() {
             <HeroImage />
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

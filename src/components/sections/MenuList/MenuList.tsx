@@ -41,7 +41,7 @@ export function MenuList() {
                 </h2>
                 <p className="text-base text-black/60 mb-8">{category.description}</p>
 
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {category.items.map((item) => (
                     <div
                       key={item.id}
@@ -78,7 +78,7 @@ export function MenuList() {
       </Container>
 
       {/* Full-width CTA band outside Container */}
-      <div className="w-full bg-deep-red dark-surface-red py-14 text-center mt-16">
+      <div className="w-full bg-deep-red dark-surface-red py-14 text-center">
         <h2 className="font-archivo font-extrabold uppercase text-3xl md:text-4xl text-cream mb-4">
           Hungry? Book a table
         </h2>
